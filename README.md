@@ -1,2 +1,12 @@
 # ssmcode-demo
 ssmcode统一代码生成框架demo
+
+请先修改application.properties下的数据库连接和redis连接
+如不需要redis，将BaseController中的RedisTemplate的代码注释掉，并将application.properties中的redis配置也注释掉
+注释掉SessionFilter和FilterConfig将不需要登录验证，
+BaseController中的getUserId方法改成直接返回1
+create_table_20210606172531.sql为生成ssmcode-demo工程时的ddl语句
+t_attribute、t_attribute_value为数据字典表
+字典表数据初始化脚本 attribute_20210606.sql，可直接导入mysql中
+http://localhost:8080/sys/brand/index
+
